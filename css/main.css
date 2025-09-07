@@ -406,34 +406,34 @@ footer a{
   }
   
   .case-brand::after {
-    top: -110px;
-    right: -80px;
-    width: 100px; /* 你可以调整 */
-    height: 100px; 
+    top: -80px;
+    right: -40px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
     transform: rotate(300deg)
   }
 
   .case-interior::after {
-    bottom: -140px;
-    left: -80px;
-    width: 100px; /* 你可以调整 */
-    height: 100px; 
+    bottom: -80px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
   }
 
   .case-photography::after {
-    top: -120px;
-    right: -60px;
-    width: 100px; /* 你可以调整 */
-    height: 100px; 
+    top: -60px;
+    right: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
     transform: rotate(60deg)
     
   }
 
   .case-echo::after {
-    top: -90px;
-    left: -80px;
-    width: 100px; /* 你可以调整 */
-    height: 100px; 
+    top: -50px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
   }
 
   .fs-2 {
