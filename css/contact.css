@@ -1,0 +1,250 @@
+:root{
+    color: #409BFF; 
+    --bs-primary:#409BFF;
+      --bs-primary-rgb:134, 186, 242;
+      --bs-secondary:#E4DF67;
+      --bs-secondary-rgb:228, 234, 221;
+      --bs-body-color:#000;
+     
+  }
+  
+  
+  footer a{
+      color:inherit;
+  }
+  
+  /* ---------------------------------------------------------------- */
+  /* 设置 btn-custom 类的按钮样式 */
+  .btn-custom {
+    background-color: var(--bs-secondary); /* 设置按钮背景色为 #E4DF67 */
+    color: #000; /* 设置按钮文字颜色为黑色 */
+    border-color: var(--bs-secondary); /* 设置按钮边框颜色 */
+    border-radius: 50px; /* 设置圆角，左右两边为半圆 */
+    padding: 10px 40px; /* 增加按钮的左右内边距，避免文字靠得太近 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 添加按钮下方阴影 */
+    display: inline-flex; /* 使用 flexbox 使文字居中 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: auto; /* 自动调整按钮宽度 */
+  }
+  
+  /* 设置鼠标悬停时的效果 */
+.btn-custom:hover {
+  background-color: #d4cf3c !important;; /* 悬停时背景色变为稍微暗一些的黄色 */
+  border-color: #d4cf3c !important;; /* 悬停时边框颜色也变为暗黄色 */
+  color: rgb(106, 106, 106); /* 设置按钮文字颜色为黑色 */
+}
+
+/* 设置点击时的效果 */
+.btn-custom:active
+.btn-custom:focus {
+  background-color:  #d4cf3c !important;; /* 点击时背景色与悬停效果相同 */
+  border-color:  #d4cf3c !important;; /* 点击时边框颜色与悬停一致 */
+  color: rgb(106, 106, 106) !important;; /* 设置按钮文字颜色为黑色 */
+  box-shadow: none !important; /* 去掉 Bootstrap 默认的点击阴影 */
+  outline: 3px solid #409BFF;  /* 可选，为键盘焦点添加可视边框 */
+  outline-offset: 3px;
+}
+  
+  /* ---------------------------------------------------------------- */
+  
+  .fs-1 {
+    font-size: 3.4rem !important;/* 或者任何你希望的更大尺寸 */
+    color: #409BFF; 
+    font-weight: bold;
+  }
+  
+  .fs-2 {
+    font-size: 3rem !important; 
+    color: #409BFF;
+    font-weight: bold; 
+  }
+  
+  .fs-3 {
+    font-size: 2.6rem !important;
+  }
+  
+  .fs-4 {
+    font-size: 1.6rem !important; 
+    font-weight: bold; 
+  
+  }
+  
+  .fs-5 {
+    font-size: 1.6rem !important;
+    
+  }
+  
+  .fs-6 {
+    font-size: 1.2rem !important; 
+   
+  }
+  
+  .P {
+    font-size: 1.2rem; 
+  }
+  /* ---------------------------------------------------------------- */
+  
+  /* 自定义导航栏背景：上蓝下透明 */
+  .custom-navbar {
+      background: linear-gradient(to bottom, rgb(134, 186, 242), rgb(255, 255, 255));
+    } 
+  
+    .navbar-nav .nav-link {
+      color: #000 !important; /* 默认黑色 */
+    }
+    
+    /* 当前激活链接加粗 */
+    .navbar-nav .nav-link.active {
+      font-weight: bold;
+    }
+    
+    /* 点击时显示蓝色边框 */
+  .navbar-nav .nav-link:focus {
+    color: #409BFF; 
+    border: 2px solid #409BFF;
+    font-weight: bold; /* make text bold */
+    background-color: rgba(71, 142, 248, 0.068); /* 可选，增加轻微背景感 */
+    padding: 6px 12px; /* 控制文字与边框的间距：上下6px，左右12px */
+    border-radius: 5px; /* 可选，圆角更好看 */
+    }
+    
+    /* 鼠标 hover 时也可以有轻微蓝色反馈 */
+    .navbar-nav .nav-link:hover {
+      color: #409BFF !important;
+      font-weight: bold; /* make text bold */
+    }
+  /* 汉堡图标变蓝 */
+  .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230d6efd' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  
+  /* ---------------------------------------------------------------- */
+  
+  
+    /* 设置 Logo和nav汉堡包 边距 */
+   
+    .navbar-brand {
+      margin-left: 2rem;
+    }
+  
+    /* 在平板和手机屏幕时，汉堡包左边距为 20px */
+    @media (max-width: 1199px) {
+      .navbar-toggler {
+        margin-left: 1rem;
+        text-align: center;
+        margin-top: 2rem; 
+      }
+  
+      .navbar-brand {
+          margin: 0 auto; /* 水平居中 */
+          top: 2rem; ;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+  
+    }
+  /* 保证下拉菜单中的 Logo 在上方，导航项在下方 */
+  .navbar-collapse {
+      display: flex;
+      flex-direction: column; /* 使 Logo 和导航项垂直排列 */
+      align-items: center; /* 让 Logo 和导航项都居中 */
+      justify-content: flex-start; /* 使 Logo 位于上方，导航项在 Logo 下方 */
+  }
+  
+  
+    /* 导航项 */
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* 让导航项垂直排列 */
+      align-items: center; /* 居中导航项 */
+      justify-content: flex-start; /* 保证导航项从顶部开始 */
+      padding-top: 20px;
+    }
+  
+  
+   /* 在大屏幕时确保导航菜单右对齐 */
+  @media (min-width: 1200px) {
+      .navbar-nav {
+          display: flex;
+          justify-content: flex-end; /* 确保导航菜单靠右 */
+          margin-top: 1rem; 
+      }
+    
+      .navbar-toggler {
+          display: none; /* 隐藏汉堡包按钮 */
+      }
+  
+      .navbar-brand {
+        margin-right: auto; /* 确保 Logo 位于最左边 */
+        margin-top: 1.5rem; 
+      }
+  }
+/* ---------------------------------------------------------------- */  
+
+/* 自定义页脚栏背景：上蓝下透明 */
+.custom-footer {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242));
+  } 
+
+
+/* ---------------------------------------------------------------- */  
+
+/* 👉 手机屏幕时，标题/图片/段落缩小 */
+
+@media (max-width: 767px) {
+    .heading-title{
+        transform: scale(0.8);
+      }
+    }
+
+/* ---------------------------------------------------------------- */  
+
+
+/* 默认情况下，不设置背景图 */
+.my-contact  {
+    position: relative;
+}
+
+.email-text {
+  position: relative;
+  display: inline-block; /* shrink to text width */
+  padding-right: 40px;   /* space for the vector */
+}
+
+/* 使用媒体查询，在大屏幕时给 .my-contact 添加背景图 */
+@media (min-width: 992px) {
+ 
+
+.vector-big, .vector-small {
+    display: block; /* make sure spans are visible */
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .vector-big {
+    top: 100px;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    background-image: url('../images/Vector-6.svg');
+  }
+ 
+   .vector-small {
+    top: 50px;
+    right: -100px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/Vector-7.svg');
+  }
+}
+  
+    /* 避免文字被遮住 */
+    .my-contact > * {
+      position: relative;
+      z-index: 2;
+    }
+  

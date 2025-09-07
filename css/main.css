@@ -1,0 +1,505 @@
+:root{
+  color: #409BFF; 
+  --bs-primary:#409BFF;
+    --bs-primary-rgb:134, 186, 242;
+    --bs-secondary:#E4DF67;
+    --bs-secondary-rgb:228, 234, 221;
+    --bs-body-color:#000;
+   
+}
+
+
+footer a{
+    color:inherit;
+}
+
+/* ---------------------------------------------------------------- */
+/* 设置 btn-custom 类的按钮样式 */
+.btn-custom {
+  background-color: var(--bs-secondary); /* 设置按钮背景色为 #E4DF67 */
+  color: #000; /* 设置按钮文字颜色为黑色 */
+  border-color: var(--bs-secondary); /* 设置按钮边框颜色 */
+  border-radius: 50px; /* 设置圆角，左右两边为半圆 */
+  padding: 10px 40px; /* 增加按钮的左右内边距，避免文字靠得太近 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 添加按钮下方阴影 */
+  display: inline-flex; /* 使用 flexbox 使文字居中 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: auto; /* 自动调整按钮宽度 */
+}
+
+/* 设置鼠标悬停时的效果 */
+.btn-custom:hover {
+  background-color: #d4cf3c !important;; /* 悬停时背景色变为稍微暗一些的黄色 */
+  border-color: #d4cf3c !important;; /* 悬停时边框颜色也变为暗黄色 */
+  color: rgb(106, 106, 106); /* 设置按钮文字颜色为黑色 */
+}
+
+/* 设置点击时的效果 */
+.btn-custom:active
+.btn-custom:focus {
+  background-color:  #d4cf3c !important;; /* 点击时背景色与悬停效果相同 */
+  border-color:  #d4cf3c !important;; /* 点击时边框颜色与悬停一致 */
+  color: rgb(106, 106, 106) !important;; /* 设置按钮文字颜色为黑色 */
+  box-shadow: none !important; /* 去掉 Bootstrap 默认的点击阴影 */
+  outline: 3px solid #409BFF;  /* 可选，为键盘焦点添加可视边框 */
+  outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+.fs-1 {
+  font-size: 3.4rem !important;/* 或者任何你希望的更大尺寸 */
+  color: #409BFF; 
+  font-weight: bold;
+}
+
+.fs-2 {
+  font-size: 3rem !important; 
+  color: #409BFF;
+  font-weight: bold; 
+}
+
+.fs-3 {
+  font-size: 2.6rem !important;
+}
+
+.fs-4 {
+  font-size: 2rem !important; 
+  color: inherit; 
+  font-weight: bold;
+}
+
+.fs-5 {
+  font-size: 0.9rem; 
+}
+
+.fs-6 {
+  font-size: 1.2rem !important; 
+
+}
+
+.P {
+  font-size: 1.2rem; 
+}
+/* ---------------------------------------------------------------- */
+
+/* 自定义导航栏背景：上蓝下透明 */
+.custom-navbar {
+    background: linear-gradient(to bottom, rgb(134, 186, 242), rgb(255, 255, 255));
+  } 
+
+  .navbar-nav .nav-link {
+    color: #000 !important; /* 默认黑色 */
+  }
+  
+  /* 当前激活链接加粗 */
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* 点击时显示蓝色边框 */
+.navbar-nav .nav-link:focus {
+  color: #409BFF; 
+  border: 2px solid #409BFF;
+  background-color: rgba(71, 142, 248, 0.068); /* 可选，增加轻微背景感 */
+  font-weight: bold; /* make text bold */
+  padding: 6px 12px; /* 控制文字与边框的间距：上下6px，左右12px */
+  border-radius: 5px; /* 可选，圆角更好看 */
+  }
+  
+  /* 鼠标 hover 时也可以有轻微蓝色反馈 */
+  .navbar-nav .nav-link:hover {
+    color: #409BFF !important;
+    font-weight: bold; /* make text bold */
+  }
+
+
+/* 汉堡图标变蓝 */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230d6efd' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+
+/* ---------------------------------------------------------------- */
+
+
+  /* 设置 Logo和nav汉堡包 边距 */
+ 
+  .navbar-brand {
+    margin-left: 2rem;
+  }
+
+  /* 在平板和手机屏幕时，汉堡包左边距为 20px */
+  @media (max-width: 1199px) {
+    .navbar-toggler {
+      margin-left: 1rem;
+      text-align: center;
+      margin-top: 2rem; 
+    }
+
+    .navbar-brand {
+        margin: 0 auto; /* 水平居中 */
+        top: 2rem; ;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+  }
+/* 保证下拉菜单中的 Logo 在上方，导航项在下方 */
+.navbar-collapse {
+    display: flex;
+    flex-direction: column; /* 使 Logo 和导航项垂直排列 */
+    align-items: center; /* 让 Logo 和导航项都居中 */
+    justify-content: flex-start; /* 使 Logo 位于上方，导航项在 Logo 下方 */
+}
+
+
+  /* 导航项 */
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 让导航项垂直排列 */
+    align-items: center; /* 居中导航项 */
+    justify-content: flex-start; /* 保证导航项从顶部开始 */
+    padding-top: 20px;
+  }
+
+
+ /* 在大屏幕时确保导航菜单右对齐 */
+@media (min-width: 1200px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end; /* 确保导航菜单靠右 */
+        margin-top: 1rem; 
+    }
+  
+    .navbar-toggler {
+        display: none; /* 隐藏汉堡包按钮 */
+    }
+
+    .navbar-brand {
+      margin-right: auto; /* 确保 Logo 位于最左边 */
+      margin-top: 1.5rem; 
+    }
+}
+
+/* ---------------------------------------------------------------- */
+.intro-section {
+  margin-top: 5rem;
+  margin-bottom: 10rem;  
+  /* 减少与 navbar 的距离 */
+}
+
+.intro-section p {
+  line-height: 1.8;
+
+}
+
+@media (min-width: 768px) {
+  .intro-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+
+.intro-section {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+  text-align: center;       /* 让文字居中 */
+  position: relative;
+  background-image: url(../images/background-1.svg), url(../images/background-2.svg);
+  background-position: 20px bottom, calc(100% - 20px) top; /* 控制图形的位置 */
+  background-repeat: no-repeat; /* 防止图形重复 */
+  background-size: 300px 300px, 300px 300px; /* 固定图形大小 */
+  
+}
+
+/* 使用媒体查询确保当屏幕宽度大于 1200px 时，背景图不会被拉伸 */
+@media (min-width: 1200px) {
+  .intro-section {
+      background-size: 360px 360px, 360px 360px; /* 固定图形大小 */
+      background-position:
+      calc(50% - 360px - 180px) bottom, /* 左图 */
+      calc(50% + 360px + 180px) top;   /* 右图 */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .intro-section {
+    background-size: 25% auto, 25% auto; /* 背景图大小在小屏幕上自适应 *
+    background-position: left bottom, right top; /* 贴边对齐 */
+  }
+}
+
+
+/* 另外，如果需要让背景图在小屏幕上自适应扩展，则可以调整小屏幕下的背景图大小 */
+@media (max-width: 767px) {
+  .intro-section {
+      background-size: 25% auto, 25% auto; /* 背景图大小在小屏幕上自适应 */
+      background-position: left, right top; /* 贴边对齐 */
+  }
+}
+
+/* ---------------------------------------------------------------- */
+
+#brand {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242), rgb(255, 255, 255));
+} 
+
+#Photography {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242), rgb(255, 255, 255));
+} 
+
+
+.case-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.case-image img {
+  width: 100%; /* 确保图片在容器内自适应 */
+  height: auto; /* 保持图片的比例 */
+  border-radius: 15px; /* 如果需要圆角，可以加上这个 */
+  z-index: 1; 
+}
+
+.case-brand::after {
+  background-image: url('../images/Vector-5.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.case-interior::after {
+  background-image: url('../images/Vector-interior.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.case-photography::after {
+  background-image: url('../images/Vector-photography.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.case-echo::after {
+  background-image: url('../images/Vector-echo.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
+
+  .case-image {
+    width: 65%;
+  }
+  
+  .case-brand::after {
+    top: -70px;
+    right: -90px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+
+  .case-interior::after {
+    top: 40px;
+    left: -60px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+
+  .case-photography::after {
+    top: -70px;
+    right: -70px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+
+  .case-echo::after {
+    top: -60px;
+    left: -90px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+  }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .case-image {
+    width: 65%; /* 调整case-image的宽度，让它根据屏幕适当缩小 */
+  }
+
+  .case-brand::after {
+    top: -40px;
+    right: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+  }
+
+  .case-interior::after {
+    bottom: -80px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+  }
+
+  .case-photography::after {
+    top: -50px;
+    right: -40px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+    
+    
+  }
+
+  .case-echo::after {
+    top: -60px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+  }
+}
+
+@media (max-width: 767px) {
+  .case-content-section  {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;  /* 确保文本居中 */
+    display: flex;
+    flex-direction: column; /* 使内容竖直排列 */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .case-image {
+    width: 70%;
+  }
+  
+  .case-brand::after {
+    top: -110px;
+    right: -80px;
+    width: 400px; /* 你可以调整 */
+    height: 400px; 
+    transform: rotate(300deg)
+  }
+
+  .case-interior::after {
+    bottom: -140px;
+    left: -80px;
+    width: 400px; /* 你可以调整 */
+    height: 400px; 
+  }
+
+  .case-photography::after {
+    top: -120px;
+    right: -60px;
+    width: 400px; /* 你可以调整 */
+    height: 400px; 
+    transform: rotate(60deg)
+    
+  }
+
+  .case-echo::after {
+    top: -90px;
+    left: -80px;
+    width: 400px; /* 你可以调整 */
+    height: 400px; 
+  }
+
+  .fs-2 {
+    font-size: 250% !important; /* 相对于父元素字体大小缩小 */
+  }
+
+  .fs-4 {
+    font-size: 140% !important; /* 相对于父元素字体大小缩小 */
+  }
+
+  .fs-5 {
+    font-size: 85% !important; /* 相对于父元素字体大小缩小 */
+  }
+
+  .fs-6 {
+    font-weight: normal !important;; /* 在小屏幕下取消加粗 */
+  }
+}
+
+.case-section {
+  padding-top: 3rem;  /* 默认情况下的顶部内边距 */
+  padding-bottom: 3rem;  /* 默认情况下的底部内边距 */
+}
+
+@media (max-width: 767px) {
+  .case-section {
+    padding-top: 4rem;  /* 平板及更大的屏幕上的顶部内边距 */
+    padding-bottom: 4rem;  /* 平板及更大的屏幕上的底部内边距 */
+  }
+}
+
+@media (min-width: 768px) {
+  .case-section {
+    padding-top: 4rem;  /* 平板及更大的屏幕上的顶部内边距 */
+    padding-bottom: 4rem;  /* 平板及更大的屏幕上的底部内边距 */
+  }
+}
+
+@media (min-width: 1200px) {
+  .case-section {
+    padding-top: 10rem;  /* 大屏幕上的顶部内边距 */
+    padding-bottom: 10rem;  /* 大屏幕上的底部内边距 */
+  }
+}
+
+/* ---------------------------------------------------------------- */
+
+#site-footer {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242));
+}
+
+/* ---------------------------------------------------------------- */
+.mt-6 {
+  margin-top: 6rem !important;
+}
+.mb-6 {
+  margin-bottom: 6rem !important;
+}
+
+.pt-6 {
+  padding-top: 6rem !important;
+}
+.pb-6 {
+  padding-bottom: 6rem !important;
+}
+
+.pt-8 {
+  padding-top: 8rem !important;
+}
