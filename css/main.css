@@ -408,23 +408,23 @@ footer a{
   .case-brand::after {
     top: -110px;
     right: -80px;
-    width: 300px; /* 你可以调整 */
-    height: 300px; 
+    width: 100px; /* 你可以调整 */
+    height: 100px; 
     transform: rotate(300deg)
   }
 
   .case-interior::after {
     bottom: -140px;
     left: -80px;
-    width: 300px; /* 你可以调整 */
-    height: 300px; 
+    width: 100px; /* 你可以调整 */
+    height: 100px; 
   }
 
   .case-photography::after {
     top: -120px;
     right: -60px;
-    width: 300px; /* 你可以调整 */
-    height: 300px; 
+    width: 100px; /* 你可以调整 */
+    height: 100px; 
     transform: rotate(60deg)
     
   }
@@ -432,8 +432,8 @@ footer a{
   .case-echo::after {
     top: -90px;
     left: -80px;
-    width: 300px; /* 你可以调整 */
-    height: 300px; 
+    width: 100px; /* 你可以调整 */
+    height: 100px; 
   }
 
   .fs-2 {
