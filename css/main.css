@@ -189,7 +189,7 @@ footer a{
 /* ---------------------------------------------------------------- */
 .intro-section {
   margin-top: 5rem;
-  margin-bottom: 10rem;  
+  margin-bottom: 4rem;  
   /* 减少与 navbar 的距离 */
 }
 
@@ -254,9 +254,14 @@ footer a{
 
 /* ---------------------------------------------------------------- */
 
+#scotties {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242), rgb(255, 255, 255));
+} 
+
 #brand {
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242), rgb(255, 255, 255));
 } 
+
 
 #Photography {
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(134, 186, 242), rgb(255, 255, 255));
@@ -281,6 +286,24 @@ footer a{
   height: auto; /* 保持图片的比例 */
   border-radius: 15px; /* 如果需要圆角，可以加上这个 */
   z-index: 1; 
+}
+
+.case-scotties::after {
+  background-image: url('../images/Vector-5.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.case-capstone::after {
+  background-image: url('../images/Vector-interior.svg'); 
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .case-brand::after {
@@ -325,6 +348,20 @@ footer a{
     width: 65%;
   }
   
+   .case-scotties::after {
+    top: -70px;
+    right: -90px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+
+  .case-capstone::after {
+    top: 40px;
+    left: -60px;
+    width: 360px; /* 你可以调整 */
+    height: 360px; 
+  }
+
   .case-brand::after {
     top: -70px;
     right: -90px;
@@ -357,6 +394,20 @@ footer a{
 @media (min-width: 768px) and (max-width: 1199px) {
   .case-image {
     width: 65%; /* 调整case-image的宽度，让它根据屏幕适当缩小 */
+  }
+
+   .case-scotties::after {
+    top: -40px;
+    right: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+  }
+
+  .case-capstone::after {
+    bottom: -80px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
   }
 
   .case-brand::after {
@@ -405,6 +456,21 @@ footer a{
     width: 70%;
   }
   
+   .case-scotties::after {
+    top: -80px;
+    right: -40px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+    transform: rotate(300deg)
+  }
+
+  .case-capstone::after {
+    bottom: -80px;
+    left: -50px;
+    width: 200px; /* 你可以调整 */
+    height: 200px; 
+  }
+
   .case-brand::after {
     top: -80px;
     right: -40px;
